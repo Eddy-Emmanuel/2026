@@ -57,7 +57,7 @@ We'll use PyTorch for the implementation, drawing directly from the notebooks. A
 
 ViT treats images as sequences of patches, applying transformer encoders (from NLP) to learn global dependencies. Here's the core pipeline, with notations explained inline for clarity:
 
-![Figure 1](2026-04-27-distill-Replicating-the-Vision-Transfomer/assets/img/2026-04-27-distill-Replicating the Vision Transfomer/figure1.png)
+![Figure 1](/2026-04-27-distill-Replicating-the-Vision-Transfomer/assets/img/2026-04-27-distill-Replicating the Vision Transfomer/figure1.png)
 
 *Figure 1: Visual overview of the ViT forward pass. An MNIST image (28x28) is split into 7x7=49 patches (P=4), each embedded into D=128 dimensions. A CLS token is prepended, positional embeddings (PE) are added, and the sequence flows through L=10 transformer encoders. The final CLS output feeds the classification head.*
 
