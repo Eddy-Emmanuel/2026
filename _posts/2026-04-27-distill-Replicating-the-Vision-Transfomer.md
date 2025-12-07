@@ -71,7 +71,7 @@ A learnable class token $z_{cls} \in \mathbb{R}^D$ (where $z_{cls}$ is the speci
 
 ViT stacks $L=10$ identical pre-norm residual encoders (where $L$ is the number of transformer layers/blocks). Each $Z_l \in \mathbb{R}^{(N+1) \times D}$ (where $Z_l$ is the input to the $l$-th layer, $l=0, \ldots, L-1$).
 
-![Figure 1.1](assets/img/2026-04-27-distill-Replicating the Vision Transfomer/figure1.1.png)
+![Figure 1.1](../assets/img/2026-04-27-distill-Replicating-the-Vision-Transfomer/figure1.1.png)
 
 *Figure 1.1: Flowchart of a single transformer encoder block (repeated L=10 times) in pre-norm style. Embeddings enter from the bottom, passing through LayerNorm → Multi-Head Attention (with dropout) → residual connection → LayerNorm → MLP Block (Linear → GELU → Dropout → Linear → Dropout) → residual connection → output at the top. Residual adds (+) ensure gradient flow; dropouts regularize.*
 
@@ -146,11 +146,11 @@ Training is done on a single GPU until early stopping (patience = 5 on validatio
 | Time per Epoch | ~40.5 sec | ~79.9 sec | Aug  |
 | Batch Test Accuracy | 93.75% | 100% | No Aug  |
 
-![Figure 2](assets/img/2026-04-27-distill-Replicating the Vision Transfomer/figure2.png)
+![Figure 2](../assets/img/2026-04-27-distill-Replicating-the-Vision-Transfomer/figure2.png)
 
 *Figure 2: Training and validation loss/accuracy curves for the ViT variant with random horizontal flips (49 epochs). Note the slower initial convergence and plateauing validation accuracy around 95%. Best val accuracy: 95.47%; Final train accuracy: 98.46%.*
 
-![Figure 3](assets/img/2026-04-27-distill-Replicating the Vision Transfomer/figure3.png)
+![Figure 3](../assets/img/2026-04-27-distill-Replicating-the-Vision-Transfomer/figure3.png)
 
 *Figure 3: Training and validation loss/accuracy curves for the ViT variant without augmentation (34 epochs). Faster convergence leads to lower final loss (0.0139) and higher accuracy (99.74% train, 97.39% val).*
 
